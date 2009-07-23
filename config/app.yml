@@ -1,0 +1,4 @@
+all:
+  sfTinyMceImageBrowserPlugin:
+    directory:  sfTinyMceImageBrowser
+    allow_resize: true

@@ -1,0 +1,18 @@
+#sfTinyMceImageBrowser_page { background: #fff none; margin: 0; padding: 5px; }
+#sfTinyMceImageBrowser_page h1 { margin-top: 1em; padding-bottom: 0.5em; font-size: 12px; font-weight: bold; border-bottom: 1px solid #000; }
+#sfTinyMceImageBrowser_page ul { list-style: none; margin-left: 0; }
+#sfTinyMceImageBrowser_page label { width: 50px; float: left; font-weight: normal; }
+#sfTinyMceImageBrowser_page .sf_tiny_mce_image_width_container { float: left; }
+#sfTinyMceImageBrowser_page .sf_tiny_mce_image_width_container label,
+#sfTinyMceImageBrowser_page .sf_tiny_mce_image_height_container label { margin: 5px 0; }
+
+#sfTinyMceImageBrowser_page .sf_tiny_mce_image_width_container input,
+#sfTinyMceImageBrowser_page .sf_tiny_mce_image_height_container input { width: 75px; padding: 1px; margin-right: 1em; }
+
+#sfTinyMceImageBrowser_page .images { overflow: hidden; }
+#sfTinyMceImageBrowser_page .images li { margin: 0.5em 0 1em; }
+#sfTinyMceImageBrowser_page .images a { display: block; position: relative; height: 75px; text-decoration: none; }
+#sfTinyMceImageBrowser_page .images img { display: block; position: absolute; left: 0;}
+#sfTinyMceImageBrowser_page .images .name,
+#sfTinyMceImageBrowser_page .images .size { display: block; margin-left:85px; }
+#sfTinyMceImageBrowser_page .images .name { padding-top: 1em; font-weight: bold; } 

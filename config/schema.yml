@@ -1,0 +1,15 @@
+propel:
+  _attributes:              { package: plugins.sfTinyMceImageBrowserPlugin.lib.model }
+  
+  sf_tiny_mce_image:
+    _attributes:            { phpName: sfTinyMceImage }
+    id:
+    name:                   { type: varchar(255), required: true }
+    file:                   { type: varchar(255), required: true }
+    width:                  { type: integer, required: true }
+    height:                 { type: integer, required: true }  
+    sf_tiny_mce_image_id:   
+    created_at:             { type: timestamp, required: true }
+    _uniques:
+      image:                [id, width, height]
+    
