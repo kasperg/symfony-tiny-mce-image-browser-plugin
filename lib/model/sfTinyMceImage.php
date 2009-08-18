@@ -5,17 +5,17 @@ class sfTinyMceImage extends BasesfTinyMceImage
 
   public function getLocalPath()
   {
-    return sfConfig::get('sf_upload_dir').'/'.sfConfig::get('app_sfTinyMceImageBrowser_directory', 'sfTinyMceImageBrowser').'/'.$this->getFile();
+    return sfConfig::get('sf_upload_dir').DIRECTORY_SEPARATOR.sfConfig::get('app_sfTinyMceImageBrowser_directory', 'sfTinyMceImageBrowser').DIRECTORY_SEPARATOR.$this->getFile();
   }
   	
 	public function getWebPath()
 	{
-		return str_replace(sfConfig::get('sf_web_dir'), '', $this->getLocalPath());		
+		return str_replace(DIRECTORY_SEPARATOR, '/', str_replace(sfConfig::get('sf_web_dir'), '', $this->getLocalPath()));		
 	}
   
   public function getResizedWebPath($width = null, $height = null)
   {
-  	$resizedPath = sfConfig::get('sf_upload_dir').'/'.sfConfig::get('app_sfTinyMceImageBrowser_directory', 'sfTinyMceImageBrowser').'/'.$this->getResizedFileName($width, $height);
+  	$resizedPath = sfConfig::get('sf_upload_dir').DIRECTORY_SEPARATOR.sfConfig::get('app_sfTinyMceImageBrowser_directory', 'sfTinyMceImageBrowser').DIRECTORY_SEPARATOR.$this->getResizedFileName($width, $height);
   	
     if (!file_exists($resizedPath) && ($width || $height))
     {
@@ -27,7 +27,7 @@ class sfTinyMceImage extends BasesfTinyMceImage
       $wiImage->saveToFile($resizedPath, 'jpeg', 80);
     }
     
-    return str_replace(sfConfig::get('sf_web_dir'), '', $resizedPath);
+    return str_replace(DIRECTORY_SEPARATOR, '/', str_replace(sfConfig::get('sf_web_dir'), '', $resizedPath));
   }
 
   protected function getResizedFileName($width = null, $height = null)
